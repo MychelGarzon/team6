@@ -1,11 +1,12 @@
 const SearchBar = () => {
-
     return (
-        <>
-            <input type="text" placeholder="Search for your item"></input>
-        </>
-
-    )
-}
+        <div className="searchBar">
+            <span className="material-symbols-outlined">
+                search
+            </span>
+            <input type="text" placeholder='Search product' />
+        </div>
+    );
+};
 
 export default SearchBar;

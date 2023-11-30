@@ -18,10 +18,35 @@ html {
 
 body {
   font-family: var(--font-base);
+  text-align: center;
 }
 
 h1 {
   font-family: var(--font-display);
+}
+
+
+/*Search Bar*/
+
+.searchBar {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+}
+
+input {
+  padding-right: 20px;
+  text-align: center;
+  width: 24.75rem;
+  height: 2.625rem;
+  font-family: inherit;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  margin-left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
@@ -119,3 +144,4 @@ button {
 
     font-size: 3rem;
   }
+
