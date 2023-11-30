@@ -19,3 +19,41 @@ body {
 h1 {
   font-family: var(--font-display);
 }
+
+/* Nav */
+
+nav {
+  background-color: white;
+  color: 333333;
+  padding: 10px;
+  text-align: center;
+  height: 4rem;
+  position: sticky;
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: sticky;
+  margin-left: 4rem;
+}
+
+nav h2 {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #3441ad;
+  color: white;
+  min-height: 0.625rem;
+  min-width: 2.188rem;
+  border-radius: 0.3rem;
+  margin-left: 5rem;
+}
