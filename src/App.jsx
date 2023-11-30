@@ -1,16 +1,37 @@
-import Header from './Components/Header'
-import Hero from "./Components/Hero.jsx";
-import Footer from './Components/Footer.jsx';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
+import Root from "./routes/Root.jsx";
+import Home from "./routes/Home.jsx";
+import SinglePage from "./routes/SinglePage.jsx";
+import About from "./routes/About.jsx";
+import ErrorPage from "./routes/ErrorPage.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/product/:productID",
+        element: <SinglePage />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <>
-
-      <Header />
-      <Hero />
-      <Footer />
-
+      <RouterProvider router={router} />
     </>
   );
 }
