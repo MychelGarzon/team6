@@ -1,8 +1,8 @@
 /* Custom properties */
 /* :root is not the same as #root */
 :root {
-  --font-base: "Lato", sans-serif;
-  --font-display: "Lobster", sans-serif;
+  --font-base: 'Lato', sans-serif;
+  --font-display: 'Lobster', sans-serif;
 }
 
 /* Basic styles */
@@ -24,7 +24,6 @@ body {
 h1 {
   font-family: var(--font-display);
 }
-
 
 /*Search Bar*/
 
@@ -48,7 +47,6 @@ input {
   top: 50%;
   transform: translateY(-50%);
 }
-
 
 /* Nav */
 
@@ -78,10 +76,17 @@ nav h2 {
   text-decoration: none;
   font-size: 1rem;
 }
+nav a {
+  text-decoration: none;
+}
+nav a:visited {
+  color: #333;
+}
 
-button {
+.logIn_btn {
   background-color: #3441ad;
   color: white;
+  padding: 0.4rem;
   min-height: 0.625rem;
   min-width: 2.188rem;
   border-radius: 0.3rem;
@@ -102,7 +107,7 @@ button {
   height: calc(100vh - 4rem);
   margin: 0 auto;
   padding: 1rem 4rem;
-  background-image: url("./assets/hero-img.jpg");
+  background-image: url('./assets/hero-img.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -225,4 +230,3 @@ button {
     height: 300px;
   }
 }
-

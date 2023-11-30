@@ -5,6 +5,7 @@ import Home from "./routes/Home.jsx";
 import SinglePage from "./routes/SinglePage.jsx";
 import About from "./routes/About.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
+import Products from "./routes/Products.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
       },
       {
         path: "/product/:productID",
