@@ -86,6 +86,7 @@ button {
   min-width: 2.188rem;
   border-radius: 0.3rem;
   margin-left: 5rem;
+}
 
 /* Hero */
 /* Hero image by LUM3N from Pixabay */
@@ -131,6 +132,27 @@ button {
 .hero__btn:hover {
   color: #ccc;
 }
+
+/* Footer starts here */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 3rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+#footer a {
+  color: #fff;
+}
+
+/* Footer ends here */
+
 @media (max-width: 600px) {
   .hero {
     justify-content: center;
@@ -143,6 +165,13 @@ button {
     margin-bottom: 1rem;
     font-size: 3rem;
   }
+
+  /* Footer starts here */
+  #footer {
+    padding: 1rem;
+    font-size: 12px;
+  }
+  /* Footer ends here */
 }
 
 /* Card */
@@ -196,3 +225,4 @@ button {
     height: 300px;
   }
 }
+
