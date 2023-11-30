@@ -1,8 +1,8 @@
 /* Custom properties */
 /* :root is not the same as #root */
 :root {
-  --font-base: 'Lato', sans-serif;
-  --font-display: 'Lobster', sans-serif;
+  --font-base: "Lato", sans-serif;
+  --font-display: "Lobster", sans-serif;
 }
 
 /* Basic styles */
@@ -12,10 +12,73 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-base);
 }
 
 h1 {
   font-family: var(--font-display);
+}
+
+/* Hero */
+/* Hero image by LUM3N from Pixabay */
+/* https://pixabay.com/photos/bag-brand-business-map-contents-1853847/ */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+  /* Calculate height: 100vh - Header height */
+  height: calc(100vh - 4rem);
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  background-image: url("./assets/hero-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  box-shadow: inset 0 0 0 5000px rgba(35, 44, 128, 0.6);
+}
+.hero__title {
+  text-align: right;
+}
+.hero__title h1 {
+  margin-bottom: 1.5rem;
+  font-size: 6rem;
+  font-weight: 400;
+}
+.hero__title p {
+  font-size: 1.25rem;
+}
+.hero__btn {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  cursor: pointer;
+}
+.hero__btn:hover {
+  color: #ccc;
+}
+@media (max-width: 600px) {
+  .hero {
+    justify-content: center;
+    padding: 1rem;
+  }
+  .hero__title {
+    text-align: center;
+  }
+  .hero__title h1 {
+    margin-bottom: 1rem;
+
+    font-size: 3rem;
+  }
 }
