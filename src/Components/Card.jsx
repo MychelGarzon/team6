@@ -2,7 +2,7 @@ function Card({ product }) {
   return (
     <div className="card">
       <div className="card__img">
-        <img src={product.imgURL} alt={product.title} />
+        <img src={product.img_url} alt={product.title} />
       </div>
       <div className="card__content">
         <h3 className="card__name">{product.title}</h3>

@@ -1,9 +1,10 @@
+import ProductsList from "../Components/ProductsList";
 
 function Products() {
 
     return (
         <div className="cards">
-            {/* Cards will go here */}
+            <ProductsList/>
         </div>
     );
 }
