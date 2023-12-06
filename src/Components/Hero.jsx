@@ -1,8 +1,7 @@
 function Hero() {
   const scrollDown = () => {
-    // TODO: check scrolling when layout is finished
     let pageHeight = window.innerHeight;
-    window.scrollBy(0, pageHeight);
+    window.scrollTo(0, pageHeight);
   };
 
   return (
@@ -11,8 +10,8 @@ function Hero() {
         <h1>JudoMyka</h1>
         <p>Elevate your style</p>
       </div>
-      <button onClick={scrollDown}>
-        <span className="hero__btn material-symbols-outlined">expand_circle_down</span>
+      <button className="hero__btn" onClick={scrollDown}>
+        <span className="hero__btn__icon material-symbols-outlined">expand_circle_down</span>
       </button>
     </div>
   );
