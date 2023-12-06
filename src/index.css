@@ -243,3 +243,30 @@ nav a:visited {
     height: 300px;
   }
 }
+
+/* About page */
+.about-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: left;
+  line-height: 1.5;
+}
+.about-title {
+  margin: 2rem 0 4rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.about-main h2 {
+  margin-bottom: 2rem;
+}
+.about-main h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-main p {
+  margin-bottom: 0.5rem;
+}
+.about-main li {
+  margin-left: 2rem;
+}
