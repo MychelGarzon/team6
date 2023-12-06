@@ -157,6 +157,49 @@ nav a:visited {
 }
 
 /* Footer ends here */
+/* Single Page starts here */
+.singlePage_container {
+  display: flex;
+  width: 68rem;
+  height: 34.37rem;
+  border: 1px solid #777777;
+  margin: 5rem auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.singlePage_image {
+  display: flex;
+  width: 34rem;
+  height: 34rem;
+}
+.singlePage_info {
+  flex: 1;
+  display: inline-block;
+  text-align: left;
+  margin: 2rem;
+}
+.singlePage_info h2,
+h3,
+p {
+  font-family: inherit;
+  margin: 2rem;
+  text-align: justify;
+}
+
+.singlePage_container a {
+  position: absolute;
+  top: 41rem;
+  left: 8rem;
+  padding: 3rem;
+  text-align: left;
+  text-decoration: underline;
+  color: #333333;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+/* Single Page ends here */
 
 @media (max-width: 600px) {
   .hero {
