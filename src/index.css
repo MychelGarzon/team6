@@ -95,7 +95,7 @@ nav a:visited {
 
 /* Hero */
 /* Hero image by LUM3N from Pixabay */
-/* https://pixabay.com/photos/bag-brand-business-map-contents-1853847/ */
+/* https://pixabay.com/photos/fashion-accessories-handbag-2208045/ */
 .hero {
   position: relative;
   display: flex;
@@ -103,9 +103,9 @@ nav a:visited {
   align-items: center;
   width: 100%;
   max-width: 1240px;
-  /* Calculate height: 100vh - Header height */
-  height: calc(100vh - 4rem);
-  margin: 0 auto;
+  /* Calculate height: 100vh - Header height * 2 */
+  height: calc(100vh - 8rem);
+  margin: 0 auto 4rem;
   padding: 1rem 4rem;
   background-image: url('./assets/hero-img.jpg');
   background-position: center;
@@ -129,13 +129,23 @@ nav a:visited {
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: none;
   transform: translateX(-50%);
-  font-size: 3rem;
   cursor: pointer;
 }
 .hero__btn:hover {
   color: #ccc;
+}
+.hero__btn__icon {
+  margin: 0;
+  font-size: 3rem;
+  color: white;
 }
 
 /* Footer starts here */
@@ -162,6 +172,9 @@ nav a:visited {
   .hero {
     justify-content: center;
     padding: 1rem;
+    /* Calculate height: 100vh - Header height */
+    height: calc(100vh - 4rem);
+    margin-bottom: 0;
   }
   .hero__title {
     text-align: center;
