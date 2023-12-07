@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+
 function About() {
+      //Page title update
+      useEffect(() => {
+    
+        document.title = `About | JUDOMYKA`;
+  
+      }, []);
+
   return (
     <main className="about-main">
       <h1 className="about-title">About</h1>

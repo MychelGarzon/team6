@@ -1,7 +1,14 @@
 import { useRouteError } from "react-router-dom";
+import { useEffect } from "react";
 
 function ErrorPage() {
   const error = useRouteError();
+      //Page title update
+      useEffect(() => {
+    
+        document.title = `Error | JUDOMYKA`;
+  
+      }, []);
 
   return (
     <div>
