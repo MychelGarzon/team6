@@ -1,12 +1,10 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 function About() {
-      //Page title update
-      useEffect(() => {
-    
-        document.title = `About | JUDOMYKA`;
-  
-      }, []);
+  //Page title update
+  useEffect(() => {
+    document.title = `About | JUDOMYKA`;
+  }, []);
 
   return (
     <main className="about-main">
@@ -14,10 +12,10 @@ function About() {
       <h2>JudoMyka ecommerce site</h2>
       <h3>Description</h3>
       <p>
-        This project was created as an assignment for the "Software Development Team Project" class at <a href="https://www.bc.fi">Business College Helsinki</a>, REACT23S Full Stack Web Developer program. The purpose of this assignment was to
-        practice working as a software development team, communication, and learning about widely used project management, development, and design tools.
+        This project was created as an assignment for the &quot;Software Development Team Project&quot; class at <a href="https://www.bc.fi">Business College Helsinki</a>, REACT23S Full Stack Web Developer program. The purpose of this assignment was
+        to practice working as a software development team, communication, and learning about widely used project management, development, and design tools.
       </p>
-      <p>Timespan of the project: 26.10. – 14.12.2023.</p>
+      <p>Timespan of the project: 26.10. &ndash; 14.12.2023.</p>
       <p>The application represents a basic ecommerce website for sports clothing with a landing page, a products page that showcases all the products from a database, and an about page.</p>
       <h3>Contributors with team roles</h3>
       <small>(In alphabetical order)</small>
