@@ -237,6 +237,11 @@ p {
 
 /* Card */
 /* Use .cards to wrap the Card components */
+.productURL {
+  /* Takes off link styles from Card */
+  text-decoration: none;
+  color: inherit;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
