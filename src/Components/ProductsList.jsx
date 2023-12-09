@@ -1,12 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { firestore } from '../firebase';
 import Card from './Card';
 
 function ProductsList() {
+    //Page title update
+    useEffect(() => {
+    
+      document.title = `Products | JUDOMYKA`;
+
+    }, []);
+
     const [products, setProducts] = useState([]);
   
     useEffect(() => {
+
+
       // Function to fetch data from Firestore
       const fetchData = async () => {
         const productsCollection = collection(firestore, 'products');
