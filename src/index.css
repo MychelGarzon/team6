@@ -47,39 +47,39 @@ input {
   top: 50%;
   transform: translateY(-50%);
 }
+/*Search bar ends*/
 
 /* Nav */
+header {
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header,
+nav {
+  padding: 1rem;
+}
 
 nav {
   background-color: white;
-  color: 333333;
-  padding: 10px;
-  text-align: center;
+  color: #333333;
   height: 4rem;
-  position: sticky;
-  overflow: hidden;
+  text-align: center;
 }
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
+li {
   display: inline-block;
-  position: sticky;
-  margin-left: 4rem;
+  margin-left: 10rem;
 }
 
-nav h2 {
+nav h2,
+nav h1 {
   display: inline-block;
-  text-decoration: none;
   font-size: 1rem;
 }
-nav a {
-  text-decoration: none;
-}
-nav a:visited {
+
+header a:visited {
   color: #333;
 }
 
@@ -92,6 +92,15 @@ nav a:visited {
   border-radius: 0.3rem;
   margin-left: 5rem;
 }
+
+/*navigation responsive*/
+.menu_trigger {
+  display: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+/*navigation responsive*/
 
 /* Hero */
 /* Hero image by LUM3N from Pixabay */
@@ -192,23 +201,17 @@ nav a:visited {
 }
 .singlePage_info h2,
 h3,
-p {
+p,
+a {
   font-family: inherit;
   margin: 2rem;
   text-align: justify;
 }
 
 .singlePage_container a {
-  position: absolute;
-  top: 41rem;
-  left: 8rem;
-  padding: 3rem;
-  text-align: left;
-  text-decoration: underline;
-  color: #333333;
-  font-size: 1rem;
-  white-space: nowrap;
+  cursor: pointer;
 }
+
 /* Single Page ends here */
 
 @media (max-width: 600px) {
@@ -290,33 +293,69 @@ p {
   .card__img {
     height: 300px;
   }
-}
 
-/* About page */
-.about-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  text-align: left;
-  line-height: 1.5;
+  /* About page */
+  .about-main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .about-title {
+    margin: 2rem 0 4rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .about-main h2 {
+    margin-bottom: 2rem;
+  }
+  .about-main h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .about-main p {
+    margin-bottom: 0.5rem;
+  }
+  .about-main li {
+    margin-left: 2rem;
+  }
 }
-.about-title {
-  margin: 2rem 0 4rem;
-  font-size: 3rem;
-  text-align: center;
-}
-.about-main h2 {
-  margin-bottom: 2rem;
-}
-.about-main h3 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-.about-main p {
-  margin-bottom: 0.5rem;
-}
-.about-main li {
-  margin-left: 2rem;
+/*navigation responsive*/
+@media (max-width: 1200px) {
+  header {
+    padding: 1rem;
+  }
+  .mobile {
+    display: none;
+  }
+
+  .menu_trigger {
+    display: block;
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+  .mobile.is-open {
+    display: block;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .mobile.is-open li {
+    display: block;
+    margin: 1rem;
+  }
+
+  /*navigation responsive*/
 }
 
 /* Back to top btn for Products page */
