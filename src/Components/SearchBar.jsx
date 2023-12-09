@@ -7,7 +7,7 @@ const SearchBar = ({ onSearch }) => {
     const handleInputChange = event => {
     const query = event.target.value;
     setSearchQuery(query);
-    onSearch(query); // You can pass the query to the parent component if needed
+    onSearch(query);
     };
 
 

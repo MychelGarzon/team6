@@ -53,7 +53,7 @@ function SinglePage() {
             <p>{product.description}&#160;
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque perspiciatis quia aliquam quaerat a, quibusdam quidem quos illo perferendis rem.
             </p>
-            <Link id='singlePageBackBtn' to="/products">&lt; Back to Products</Link>
+            <Link to="/products">&lt; Back to Products</Link>
           </div>
         </React.Fragment>
       ) : (
