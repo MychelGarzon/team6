@@ -10,7 +10,6 @@ function ProductsList({ searchQuery }) {
   }, []);
 
   const [products, setProducts] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     // Function to fetch data from Firestore
@@ -23,17 +22,6 @@ function ProductsList({ searchQuery }) {
       } catch (error) {
         console.error('Error fetching products:', error);
 
-        // Check for specific error scenarios
-        if (error.code === 'permission-denied') {
-          // Handle permission denied error
-          setErrorMessage("Permission denied. Please check your access.");
-        } else if (error.code === 'resource-exhausted') {
-          // Handle resource exhausted error (e.g., database query quota exceeded)
-          setErrorMessage("Database query quota exceeded. Please try again later.");
-        } else {
-          // Handle other generic errors
-          setErrorMessage("An error occurred while fetching products. Please try again.");
-        }
       }
     };
 
@@ -43,7 +31,8 @@ function ProductsList({ searchQuery }) {
   // Filter products based on search query
   const filteredProducts = products
     ? products.filter((product) =>
-        product.title && product.title.toLowerCase().includes(searchQuery.toLowerCase())
+        product.description && product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.category && product.category.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : null;
 
@@ -54,7 +43,7 @@ function ProductsList({ searchQuery }) {
           <Card key={product.id} product={product} />
         ))
       ) : (
-        <p>{errorMessage || "Loading..."}</p>
+        <p>Loading...</p>
       )}
     </>
   );

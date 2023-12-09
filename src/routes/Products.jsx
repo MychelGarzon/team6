@@ -6,13 +6,13 @@ import SearchBar from '../Components/SearchBar';
 function Products() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleSearch = query => {
+  const handleSearch = (query) => {
     setSearchQuery(query);
   };
 
   return (
     <>
-      <SearchBar/>
+      <SearchBar onSearch={handleSearch} />
       <div className="cards">
         <ProductsList searchQuery={searchQuery} />
       </div>

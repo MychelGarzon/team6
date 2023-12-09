@@ -186,6 +186,8 @@ header a:visited {
   text-align: center;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 .singlePage_image {
@@ -209,7 +211,16 @@ a {
 }
 
 .singlePage_container a {
-  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.singlePage_container a:hover {
+  background-color: #eee;
 }
 
 /* Single Page ends here */
