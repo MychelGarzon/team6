@@ -1,5 +1,6 @@
 import Hero from "../Components/Hero.jsx";
 import { useEffect } from "react";
+import ProductCarousel from "../Components/ProductCarousel.jsx";
 
 function Home() {
   //Page title update
@@ -13,6 +14,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <ProductCarousel/>
     </>
   );
 }
