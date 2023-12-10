@@ -395,3 +395,32 @@ a {
 .back-to-top:hover {
   opacity: 1;
 }
+
+/* Product Carousel starts here */
+
+.carouselImg {
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+/* Overriding slick slide's styling*/
+.slick-slide {
+  height: inherit !important;
+}
+
+.slick-slider {
+  width: 100vw;
+  margin: 0 15% !important;
+}
+
+.slick-track {
+  display: flex !important;
+  
+}
+
+.slick-track div{
+  margin: 0 0.5rem;
+}
+
+/* Product Carousel ends */
