@@ -304,33 +304,6 @@ a {
   .card__img {
     height: 300px;
   }
-
-  /* About page */
-  .about-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    text-align: left;
-    line-height: 1.5;
-  }
-  .about-title {
-    margin: 2rem 0 4rem;
-    font-size: 3rem;
-    text-align: center;
-  }
-  .about-main h2 {
-    margin-bottom: 2rem;
-  }
-  .about-main h3 {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  .about-main p {
-    margin-bottom: 0.5rem;
-  }
-  .about-main li {
-    margin-left: 2rem;
-  }
 }
 /*navigation responsive*/
 @media (max-width: 1200px) {
@@ -403,7 +376,6 @@ a {
   width: 100%;
 }
 
-
 /* Overriding slick slide's styling*/
 .slick-slide {
   height: inherit !important;
@@ -416,11 +388,41 @@ a {
 
 .slick-track {
   display: flex !important;
-  
 }
 
-.slick-track div{
+.slick-track div {
   margin: 0 0.5rem;
 }
 
 /* Product Carousel ends */
+
+/* About page */
+.about-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: left;
+  line-height: 1.5;
+}
+.about-title {
+  margin: 2rem 0 4rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.about-main h2 {
+  margin: 0 0 2rem;
+}
+.about-main h3 {
+  margin: 2.5rem 0 1rem;
+}
+.about-main p {
+  margin: 0 0 0.5rem;
+}
+.about-main a {
+  margin: 0;
+}
+.about-list li {
+  display: list-item;
+  margin: 0 0 0 2rem;
+}
+/* About page ends */

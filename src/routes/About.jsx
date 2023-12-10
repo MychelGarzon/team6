@@ -19,14 +19,14 @@ function About() {
       <p>The application represents a basic ecommerce website for sports clothing with a landing page, a products page that showcases all the products from a database, and an about page.</p>
       <h3>Contributors with team roles</h3>
       <small>(In alphabetical order)</small>
-      <ul>
+      <ul className="about-list">
         <li>Mychel Garzon (@MychelGarzon): tech lead and front-end developer</li>
         <li>Jubair Hossain (@meJubair): product owner and full-stack developer</li>
         <li>Kati Perkiö (@katiperkio)</li>
         <li>Dóra Tokai (@tdora28): designer and front-end developer</li>
       </ul>
       <h3>Tools</h3>
-      <ul>
+      <ul className="about-list">
         <li>Version control: Git and GitHub</li>
         <li>Project management: Trello</li>
         <li>Communication: MS Teams, WhatsApp</li>
