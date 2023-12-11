@@ -7,6 +7,7 @@ import About from "./routes/About.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import Products from "./routes/Products.jsx";
 import Auth from "./Components/Auth.jsx";
+import Dashboard from "./Components/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "/auth",
         element: <Auth />,
       },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      }
     ],
   },
 ]);

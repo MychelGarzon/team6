@@ -12,7 +12,7 @@ export default function Header() {
 
     // User authentication
     const [user, setUser] = useState(null);
-    console.log('User:', user);
+    /* console.log('User:', user); */
     const [displayName, setDisplayName] = useState(null);
 
         //Sign-out function is called with onClick={handleLogout} inside a HTML element

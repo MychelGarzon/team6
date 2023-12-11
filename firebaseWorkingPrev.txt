@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -30,34 +31,30 @@ export const getDisplayNameByUid = async (uid) => {
 };
 
 const createUserProfileDocument = async (user, additionalData) => {
-  if (!user) return null;
+  if (!user) return;
 
   const userRef = doc(firestore, 'users', user.uid);
+  const snapshot = await getDoc(userRef);
 
-  try {
-    // Check if the document exists
-    const snapshot = await getDoc(userRef);
+  if (!snapshot.exists()) {
+    const { displayName, email } = user;
+    const createdAt = new Date();
 
-    if (!snapshot.exists()) {
-      const { displayName, email } = user;
-      const createdAt = new Date();
-
-      // Set the document data
+    try {
       await setDoc(userRef, {
         displayName,
         email,
         createdAt,
         ...additionalData,
       });
+    } catch (error) {
+      console.error('Error creating user profile', error.message);
     }
-
-    // Fetch the updated snapshot after creating/updating the document
-    const updatedSnapshot = await getDoc(userRef);
-    return updatedSnapshot;
-  } catch (error) {
-    console.error('Error creating user profile', error.message);
-    return null;
   }
+
+  return userRef;
 };
+
+
 
 export { auth, firestore, createUserProfileDocument };
