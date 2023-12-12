@@ -29,10 +29,13 @@ const Auth = () => {
         // Fetch the user's display name from Firestore
         const userDocument = await createUserProfileDocument(user);
         if (userDocument) {
-          /* setDisplayName(userDocument.data().displayName); */
-          setDisplayName(userDocument.data().displayName);
-        }
+            // Ensure that the userDocument is valid before accessing its data
+            const userData = userDocument.data();
+            if (userData) {
+              setDisplayName(userData.displayName);
+            }
       }
+    }
     });
 
     return () => unsubscribe();
@@ -54,12 +57,12 @@ const Auth = () => {
 
       } else {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        console.log('User signed in:', userCredential.user);
+        /* console.log('User signed in:', userCredential.user); */
 
         navigate('/dashboard');
       }
     } catch (error) {
-      console.error('Authentication error:', error.message);
+      /* console.error('Authentication error:', error.message); */
       setError(error.message);
     }
   };
