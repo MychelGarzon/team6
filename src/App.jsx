@@ -6,6 +6,7 @@ import SinglePage from "./routes/SinglePage.jsx";
 import About from "./routes/About.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import Products from "./routes/Products.jsx";
+import Auth from "./Components/Auth.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/auth",
+        element: <Auth />,
       },
     ],
   },

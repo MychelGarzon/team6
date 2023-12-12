@@ -1,6 +1,9 @@
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBsSrJC02Z89UUA-w58f22roCztOY5vqHI",
   authDomain: "t6store-5ea2a.firebaseapp.com",
@@ -12,12 +15,46 @@ const firebaseConfig = {
   measurementId: "G-ELDNB6B6Y6"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-const firestore = getFirestore(firebaseApp);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const firestore = getFirestore(app);
 
-// console.log('Firebase is connected, and Firestore instance is created:', firestore);
-// alert('Firebase is connected, and Firestore instance is created');
+export const getDisplayNameByUid = async (uid) => {
+  const userRef = doc(db, 'users', uid);
+  const userSnapshot = await getDoc(userRef);
+
+  if (userSnapshot.exists()) {
+    return userSnapshot.data().displayName;
+  } else {
+    return null; // User not found in Firestore
+  }
+};
+
+const createUserProfileDocument = async (user, additionalData) => {
+  if (!user) return;
+
+  const userRef = doc(firestore, 'users', user.uid);
+  const snapshot = await getDoc(userRef);
+
+  if (!snapshot.exists()) {
+    const { displayName, email } = user;
+    const createdAt = new Date();
+
+    try {
+      await setDoc(userRef, {
+        displayName,
+        email,
+        createdAt,
+        ...additionalData,
+      });
+    } catch (error) {
+      console.error('Error creating user profile', error.message);
+    }
+  }
+
+  return userRef;
+};
 
 
 
-export { firestore };
+export { auth, firestore, createUserProfileDocument };

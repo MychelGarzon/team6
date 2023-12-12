@@ -84,13 +84,18 @@ header a:visited {
 }
 
 .logIn_btn {
-  background-color: #3441ad;
+  background-color: darkslateblue;
   color: white;
   padding: 0.4rem;
   min-height: 0.625rem;
   min-width: 2.188rem;
   border-radius: 0.3rem;
   margin-left: 5rem;
+  text-decoration: none;
+}
+
+#navAuth {
+  color: white;
 }
 
 /*navigation responsive*/
@@ -426,3 +431,95 @@ a {
   margin: 0 0 0 2rem;
 }
 /* About page ends */
+
+
+/*auth.jsx starts*/
+#authPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+#authForm {
+  padding: 1rem;
+  width: fit-content;
+}
+
+#authForm h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  -webkit-text-stroke: 4px;
+  letter-spacing: 4px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: darkslateblue;
+  background-color: #ccc;
+}
+
+#authForm form {
+  border: 0px solid #000;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ddd;
+}
+
+#authForm label {
+  color: darkslateblue;
+  font-weight: bold;
+}
+
+#authForm input {
+  accent-color: #bbb;
+  color: darkslateblue;
+  background-color: #ccc;
+  border: 1px solid darkslateblue;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+#authForm button[type='submit'] {
+  place-items: center;
+  background-color: #ccc;
+  padding: 0.5rem 0.125rem;
+  border-radius: 0.25rem;
+  border: 1px solid #333;
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+#authForm button[type='submit']:hover {
+  background-color: beige;
+  border-color: #333;
+}
+
+#authForm > button[type='button'] {
+  color: darkslateblue;
+  border: 1px solid none;
+}
+
+#authForm > button[type='button']:hover {
+  border: 1px solid none;
+}
+
+#authForm #authP {
+  cursor: pointer;
+  color: darkgreen;
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+/*auth.jsx ends*/
