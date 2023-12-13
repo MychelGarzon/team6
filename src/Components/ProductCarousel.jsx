@@ -25,7 +25,7 @@ const ProductCarousel = () => {
 
 
         setProducts(productsData);
-        console.log('Fetched Products:'/*,  productsData */);
+        /* console.log('Fetched Products:',  productsData ); */
       } catch (error) {
         console.error('Error fetching products:', error);
       }
