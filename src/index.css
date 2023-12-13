@@ -41,7 +41,7 @@ input {
   font-family: inherit;
 }
 
-.material-symbols-outlined {
+.searchBar .material-symbols-outlined {
   position: absolute;
   margin-left: 1rem;
   top: 50%;
@@ -52,50 +52,73 @@ input {
 /* Nav */
 header {
   display: flex;
-  top: 0;
   justify-content: space-between;
   align-items: center;
-}
-
-header,
-nav {
-  padding: 1rem;
-}
-
-nav {
   background-color: white;
-  color: #333333;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1rem;
   height: 4rem;
-  text-align: center;
 }
-li {
-  display: inline-block;
-  margin-left: 10rem;
+
+header nav {
+  color: #333333;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  margin: 0;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+header nav ul li a.active {
+  text-decoration: underline;
+}
+header nav ul li a:hover,
+.logo:hover {
+  transform: scale(1.1);
 }
 
 nav h2,
 nav h1 {
-  display: inline-block;
   font-size: 1rem;
 }
 
-header a:visited {
+header nav ul li a:visited {
   color: #333;
 }
 
 .logIn_btn {
+  display: inline-block;
   background-color: darkslateblue;
   color: white;
   padding: 0.4rem;
-  min-height: 0.625rem;
-  min-width: 2.188rem;
   border-radius: 0.3rem;
-  margin-left: 5rem;
   text-decoration: none;
 }
 
 #navAuth {
   color: white;
+}
+
+.logo a {
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+.logo a:visited {
+  color: #333;
 }
 
 /*navigation responsive*/
@@ -207,9 +230,9 @@ header a:visited {
   margin: 2rem;
 }
 .singlePage_info h2,
-h3,
-p,
-a {
+.singlePage_info h3,
+.singlePage_info p,
+.singlePage_info a {
   font-family: inherit;
   margin: 2rem;
   text-align: justify;
@@ -310,10 +333,11 @@ a {
     height: 300px;
   }
 }
+
 /*navigation responsive*/
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   header {
-    padding: 1rem;
+    position: relative;
   }
   .mobile {
     display: none;
@@ -321,9 +345,6 @@ a {
 
   .menu_trigger {
     display: block;
-    position: fixed;
-    top: 3rem;
-    right: 4rem;
     cursor: pointer;
     background: transparent;
     border: none;
@@ -331,17 +352,16 @@ a {
 
   .mobile.is-open {
     display: block;
-    background-color: white;
     position: absolute;
     left: 0;
-    top: 70px;
+    top: 4rem;
     width: 100%;
     z-index: 100;
+    padding: 2rem 1rem;
+    background-color: white;
   }
-
-  .mobile.is-open li {
-    display: block;
-    margin: 1rem;
+  .mobile.is-open ul {
+    flex-direction: column;
   }
 
   /*navigation responsive*/
@@ -432,14 +452,12 @@ a {
 }
 /* About page ends */
 
-
 /*auth.jsx starts*/
 #authPage {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-
 }
 
 #authForm {
@@ -523,7 +541,6 @@ a {
   margin-top: 1rem;
 }
 /*auth.jsx ends*/
-
 
 /* Dashboard CSS starts here */
 #dashPage {
