@@ -362,6 +362,7 @@ header nav ul li a:visited {
   }
   .mobile.is-open ul {
     flex-direction: column;
+    gap: 1.5rem;
   }
 
   /*navigation responsive*/
