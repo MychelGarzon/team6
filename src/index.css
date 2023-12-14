@@ -21,6 +21,11 @@ body {
   text-align: center;
 }
 
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
 h1 {
   font-family: var(--font-display);
 }
@@ -190,11 +195,13 @@ header nav ul li a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: flex-end;
+  height: 8vh;
+  position: relative;
+  bottom: 0;
+
 
   margin: 0 auto;
-  max-width: 1240px;
-  padding: 3rem;
+  width: 1240px;
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -209,7 +216,7 @@ header nav ul li a:visited {
 .singlePage_container {
   display: flex;
   width: 68rem;
-  height: 34.37rem;
+  height: 67.9vh;
   border: 1px solid #777777;
   margin: 5rem auto;
   text-align: center;
@@ -285,44 +292,55 @@ header nav ul li a:visited {
   text-decoration: none;
   color: inherit;
 }
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   padding: 3rem 1rem;
+  position: relative;
 }
+
 .card {
   max-width: 400px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
 .card:hover {
   transform: scale(0.98);
 }
+
 .card__img {
   width: 100%;
   height: 400px;
 }
+
 .card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
 .card__content {
   padding: 1rem;
 }
+
 .card__name {
   font-size: 1.2rem;
 }
+
 .card__category {
   margin-bottom: 0.8rem;
   color: #777;
 }
+
 .card__price {
   font-weight: 600;
 }
+
 @media (max-width: 600px) {
   .cards {
     padding: 1rem 0;
@@ -406,19 +424,23 @@ header nav ul li a:visited {
 /* Overriding slick slide's styling*/
 .slick-slide {
   height: inherit !important;
+  overflow-x: hidden;
 }
 
 .slick-slider {
-  width: 100vw;
-  margin: 0 15% !important;
+  width: 1280px;
+  margin: 0 auto !important;
+  overflow-x: hidden;
 }
 
 .slick-track {
   display: flex !important;
+  margin-bottom: 3rem;
 }
 
 .slick-track div {
   margin: 0 0.5rem;
+  overflow-x: hidden;
 }
 
 /* Product Carousel ends */
@@ -548,6 +570,8 @@ header nav ul li a:visited {
 #dashPage {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 85.1vh;
 }
 
 #dash {
