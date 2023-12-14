@@ -10,7 +10,7 @@ function Card({ product }) {
         <div className="card__content">
           <h3 className="card__name">{product.title}</h3>
           <p className="card__category">{product.category}</p>
-          <p className="card__price">€{product.price}</p>
+          <p className="card__price">€{product.price - 0.01}</p>
         </div>
       </div>
     </Link>
