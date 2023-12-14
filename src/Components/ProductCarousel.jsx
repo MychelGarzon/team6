@@ -78,9 +78,10 @@ const ProductCarousel = () => {
         <Link key={product.id} className='productURL1' to={`/product/${product.id}`}>
         <div className='carouselCard' key={product.id}>
           <img className='carouselImg' src={product.img_url} alt={product.title} />
-          {/*<h3>{product.title}</h3>
-          <p>{product.subtitle}</p>
-          <p className='priceBar'>€{product.price - 0.01} <button className='addBtn'>Add to List</button></p> */}
+          <p >
+            <span className='priceBar'>€{product.price - 0.01}</span>
+            {/* <button className='addBtn'>Add to List</button> */}
+          </p>
         </div>
         </Link>
       ))}

@@ -65,21 +65,21 @@ function SinglePage() {
     return (
       <div className="singlePage_container">
           {product ? (
-        <React.Fragment>
+        <>
           <div className='singlePage_image'>
             <img src={product.img_url} alt={product.title} />
           </div>
   
           <div className='singlePage_info'>
             <h2>{product.title}</h2>
-            <p>€{product.price} <span>FREE SHIPPING</span></p>
+            <p>€{product.price - 0.01} <span>FREE SHIPPING</span></p>
             <h3>Description</h3>
             <p>{product.description}&#160;
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque perspiciatis quia aliquam quaerat a, quibusdam quidem quos illo perferendis rem.
             </p>
             <Link to="/products">&lt; Back to Products</Link>
           </div>
-        </React.Fragment>
+        </>
       ) : (
         <p>No such Product!</p>
       )}  

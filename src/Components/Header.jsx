@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { firestore, auth } from '../firebase';
+import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
 export default function Header() {
@@ -26,15 +26,13 @@ export default function Header() {
 
   // User authentication
   const [user, setUser] = useState(null);
-  /* console.log('User:', user); */
-  const [displayName, setDisplayName] = useState(null);
 
-  //Sign-out function is called with onClick={handleLogout} inside a HTML element
+  //Sign-out function is called with onClick={handleLogout}
   const navigate = useNavigate();
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      //console.log('User logged out');
+      
       navigate('/dashboard');
     } catch (error) {
       console.error('Logout error:', error.message);
@@ -76,8 +74,7 @@ export default function Header() {
             </NavLink>
           </li>
 
-          {/* Login button replaced with conditional links */}
-          {/* <li><NavLink to="/auth" className="logIn_btn">LOG IN</NavLink></li> */}
+          {/* Links below are conditional based on user logged in or not */}
           {user ? (
             <>
               <li onClick={toggleMenu}>
