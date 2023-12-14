@@ -198,13 +198,14 @@ header nav ul li a:visited {
   background-color: #333;
   color: #fff;
   text-align: center;
+  word-spacing: 5px;
 }
 
 #footer a {
   color: #fff;
 }
-
 /* Footer ends here */
+
 /* Single Page starts here */
 .singlePage_container {
   display: flex;
@@ -398,9 +399,26 @@ header nav ul li a:visited {
 
 /* Product Carousel starts here */
 
+.carouselCard {
+  position: relative;
+}
+
 .carouselImg {
   margin: 0 auto;
   width: 100%;
+}
+
+.carouselCard p {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 1rem;
+  padding: 1rem;
+  top: 0;
+  width: 100%;
+  color: #333;
+  font-weight: bold;
+  font-family: inherit;
 }
 
 /* Overriding slick slide's styling*/
@@ -410,7 +428,7 @@ header nav ul li a:visited {
 
 .slick-slider {
   width: 100vw;
-  margin: 0 15% !important;
+  margin: 0 15% 2rem 15%!important;
 }
 
 .slick-track {
