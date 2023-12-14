@@ -19,8 +19,8 @@ const UserProfile = () => {
 
         if (userSnapshot.exists()) {
           const userData = userSnapshot.data();
-          setDisplayName(userData.displayName);
-          setEmail(userData.email);
+          setDisplayName(userData.displayName || '');
+          setEmail(userData.email || '');
         }
       }
     };
