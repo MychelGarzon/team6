@@ -36,6 +36,9 @@ function ProductsList({ searchQuery }) {
       )
     : null;
 
+
+    
+
   return (
     <>
       {filteredProducts ? (

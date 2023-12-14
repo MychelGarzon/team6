@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom';
 import { doc, getDoc } from "firebase/firestore";
 import { firestore } from '../firebase';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+
+
 function SinglePage() {
 
   const { productId } = useParams();
@@ -35,6 +39,26 @@ function SinglePage() {
   
       fetchProductDetail();
     }, [productId]);
+
+  // Page protected by user authentication
+  const [user, setUser] = useState(null);
+  
+  useEffect(() => {
+    // Listen for changes in the user's authentication state
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    // Cleanup the subscription when the component unmounts
+    return () => unsubscribe();
+  }, []);
+
+  // If the user is not signed in, you can render alternative content or redirect
+  if (!user) {
+    return <p id='plsSignIn'>Please<Link to={'/'}>&nbsp; sign in &#160;</Link> to view this content.</p>;
+  }
+
+
 
 
 
